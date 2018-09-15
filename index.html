@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,300i,400,400i" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="name">
+            <h1>SARAH KUNZLER</h1>
+        </div>
+        <div class="about">
+            <p class="noPadding">BYU  |  Computer Science Major  |  Senior </p>
+        </div>
+        <div class="Projects">
+            <!-- switch to some screenshots that will give a shpeal when hovered-->
+           <h2>PROJECTS:</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="title">
+                        </td>
+                        <td class="project">
+                            <div class="projImage">
+                                <img  id="proj1" src="desPortf.PNG" alt="Design Portfolio" onmouseover="showProjDesc(this)" onmouseleave="hideProjDesc(this)">
+                                <div id="img1" class="imageText">Design Portfolio</div>
+                            </div>
+                        </td>
+                        <td class="project">
+                            <div class="projImage">
+                                <img src="Juxta.PNG" alt="Mobile News App" id="proj2" onmouseover="showProjDesc(this)" onmouseleave="hideProjDesc(this)">
+                                <div id="img2" class="imageText">Mobile News App</div>
+                            </div>
+                        </td>
+                        <td class="project">
+                            <div class="projImage">
+                                <img src="wasteNot.PNG" alt="Mobile Food Management App" id="proj3" onmouseover="showProjDesc(this)" onmouseleave="hideProjDesc(this)">
+                                <div id="img3" class="imageText">Mobile Food Management App</div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="workExperience">
+            <h2>WORK EXPERIENCE:</h2>
+            <ul>
+                <li>Legal Assistant at Kunzler Law Group</li>
+                <li>Regression Tester at Learning Suite</li>
+                <li>Web Developer at BYU LEarning Suite</li>
+            </ul>
+        </div>
+        <div class="links">
+            <!--find me on... make icons -->
+            <h2>LINKS:</h2>
+            <ul>
+                <li><a href="https://github.com/sarkunz">Github</a></li>
+                <li><a href="https://www.linkedin.com/feed/">LinkedIn</a></li>
+                <li><a href="http://sarahmykelle.wixsite.com/portfolio">Design Portfolio</a></li>
+            </ul>
+        </div>
+       <div class="footer"> </div>
+       
+       <!--add button to change themes-->
+        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
+        <script>
+        
+            function showProjDesc(obj){
+                var pic = document.getElementById(obj.id);
+                pic.style.opacity = "0.3";
+                var text = getTextEl(obj.id);
+                text.style.display = "block";
+                //switch to show description
+                //change background color to grey
+                //on mouseleave back to image
+                
+            }
+            function hideProjDesc(obj){
+                var pic = document.getElementById(obj.id);
+                pic.style.opacity = "1.0";
+                var text = getTextEl(obj.id);
+                text.style.display = "none";
+               // pic.nextElementSibling.hide();
+            }
+            
+            function getTextEl(id){
+                var text;
+               switch(id){
+                    case 'proj1':
+                        text = document.getElementById('img1');
+                        break;
+                    case 'proj2':
+                        text = document.getElementById('img2');
+                        break;
+                    case 'proj3':
+                        text = document.getElementById('img3');
+                        break;
+                }
+                return text;
+            }
+            
+        </script>
+    </body>
+</html>
